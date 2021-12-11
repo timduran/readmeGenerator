@@ -13,13 +13,14 @@ const generateObjectLicense = objectLicense => {
 }
 
 function createMarkdown(data) {
-  const { title, description, license } = data;
+  const { title, description, license, Installation, Usage, Contributing, Tests, Questions } = data;
   return `${generateBadges(license)}
 # ${title}  
 
 ## Table of Contents
 * [License](#license)
-
+* [Installation](#installation)
+* [Contributing](#contributing)
 
 ## Description 
 ${description}
@@ -28,12 +29,20 @@ ${description}
 ${generateObjectLicense(license)}
 
 ## Installation
+${Installation}
+
+## Usage
+${Usage}
 
 ## Contributing
+${Contributing}
 
 ## Tests
+${Tests}
 
 ## Questions
+${Tests}
+[${Questions}](https://github.com${Questions})
 
 `
 }
